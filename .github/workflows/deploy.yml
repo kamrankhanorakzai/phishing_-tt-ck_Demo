@@ -75,4 +75,4 @@ jobs:
           sudo pkill -f cloudflared || true
 
           # Start Cloudflare tunnel
-          nohup cloudflared tunnel --url http://localhost:3000 > /dev/null 2>&1 &
+          #nohup cloudflared tunnel --url http://localhost:3000 > /dev/null 2>&1 &
