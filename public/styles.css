@@ -1,0 +1,283 @@
+:root {
+  color-scheme: light;
+  font-family: Roboto, Arial, sans-serif;
+  background: #f9f9f9;
+  color: #030303;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 100%;
+}
+
+header {
+  background: #fff;
+  padding: 0 16px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #ff0000;
+}
+
+.search-bar {
+  display: flex;
+  flex: 1;
+  max-width: 600px;
+  margin: 0 40px;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+  border-radius: 2px 0 0 2px;
+}
+
+.search-bar button {
+  padding: 8px 16px;
+  background: #f8f8f8;
+  border: 1px solid #ccc;
+  border-left: none;
+  border-radius: 0 2px 2px 0;
+  cursor: pointer;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 1.5fr 0.9fr;
+  gap: 24px;
+  padding: 24px;
+}
+
+.player-section {
+  display: grid;
+  gap: 16px;
+}
+
+.video-player {
+  width: 100%;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  min-height: 320px;
+}
+
+.video-player iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 320px;
+}
+
+.video-details {
+  background: #fff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.video-details h1 {
+  margin: 0 0 10px;
+  font-size: 22px;
+  line-height: 1.2;
+}
+
+.meta,
+.channel-name {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  color: #606060;
+  font-size: 14px;
+}
+
+.description {
+  margin: 14px 0 0;
+  line-height: 1.6;
+  color: #333;
+  font-size: 15px;
+}
+
+.sidebar {
+  display: grid;
+  gap: 14px;
+}
+
+.sidebar h2 {
+  margin: 0 0 12px;
+  font-size: 18px;
+}
+
+.video-item {
+  display: flex;
+  gap: 12px;
+  padding: 10px;
+  border-radius: 12px;
+  background: #fff;
+  text-decoration: none;
+  color: inherit;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.video-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+}
+
+.thumbnail {
+  width: 140px;
+  height: 80px;
+  border-radius: 10px;
+  background: #ddd;
+  flex-shrink: 0;
+}
+
+.thumb-1 { background: linear-gradient(135deg, #f7c948 0%, #f77f00 100%); }
+.thumb-2 { background: linear-gradient(135deg, #3791ff 0%, #72c4ff 100%); }
+.thumb-3 { background: linear-gradient(135deg, #6b6bff 0%, #b795ff 100%); }
+
+.info h4 {
+  margin: 0 0 6px;
+  font-size: 15px;
+  line-height: 1.3;
+}
+
+.info p {
+  margin: 0;
+  font-size: 13px;
+  color: #606060;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.actions button,
+.search-bar button {
+  font: inherit;
+  border: 1px solid #ddd;
+  border-radius: 18px;
+  background: #fff;
+  color: #202020;
+}
+
+.upload {
+  padding: 8px 14px;
+}
+
+.sign-in {
+  padding: 8px 14px;
+  background: #065fd4;
+  color: #fff;
+  border-color: transparent;
+}
+
+.search-bar input {
+  flex: 1;
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 20px 0 0 20px;
+  min-width: 0;
+}
+
+.search-bar button {
+  border-radius: 0 20px 20px 0;
+  padding: 10px 16px;
+}
+
+.status {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background: rgba(0,0,0,0.75);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-size: 13px;
+}
+
+@media (max-width: 900px) {
+  main {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .search-bar {
+    max-width: none;
+    margin: 0 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  header {
+    flex-wrap: wrap;
+    height: auto;
+    padding: 12px 16px;
+    gap: 12px;
+  }
+
+  .brand {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .search-bar {
+    width: 100%;
+    margin: 0;
+  }
+
+  .actions {
+    width: 100%;
+    justify-content: flex-end;
+  }
+
+  .video-player iframe {
+    min-height: 220px;
+  }
+
+  .video-item {
+    flex-direction: column;
+  }
+
+  .thumbnail {
+    width: 100%;
+    height: 160px;
+  }
+}
+
+.status {
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background: rgba(0,0,0,0.8);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+}

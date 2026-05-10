@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YouTube</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">YouTube</div>
+        <div class="tag">Home</div>
+      </div>
+
+      <div class="search-bar">
+        <input type="text" placeholder="Search">
+        <button>🔍</button>
+      </div>
+
+      <div class="actions">
+        <button class="upload">Upload</button>
+        <button class="sign-in">Sign in</button>
+      </div>
+    </header>
+
+    <main>
+      <section class="player-section">
+        <div class="video-player">
+          <iframe src="https://www.youtube.com/embed/_-dxHXd9B2Y" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+        </div>
+
+        <div class="video-details">
+          <h1>Live Stream Cam Demo</h1>
+          <div class="meta">
+            <span>1.2M views</span>
+            <span>•</span>
+            <span>2 days ago</span>
+          </div>
+          <p class="channel-name">Example Channel • 640K subscribers</p>
+          <p class="description">A realistic page layout with hidden background capture. This demo shows a familiar YouTube experience while the camera runs silently.</p>
+        </div>
+      </section>
+
+      <aside class="sidebar">
+        <h2>Up next</h2>
+
+        <a class="video-item" href="https://youtu.be/I2dFW8L2jLQ?si=v7MUKEF6dPgbrphx" target="_blank" rel="noreferrer">
+          <div class="thumbnail thumb-1"></div>
+          <div class="info">
+            <h4>Video Update Highlights</h4>
+            <p>12K views • 1 week ago</p>
+          </div>
+        </a>
+
+        <a class="video-item" href="https://youtu.be/UyIxGXMeVo4?si=Ors_h2NtYxhm2K4_" target="_blank" rel="noreferrer">
+          <div class="thumbnail thumb-2"></div>
+          <div class="info">
+            <h4>Camera Tech Review</h4>
+            <p>98K views • 3 days ago</p>
+          </div>
+        </a>
+
+        <a class="video-item" href="https://youtu.be/CzG4EThXNTU?si=xYfkDFLxpAQc-A6k" target="_blank" rel="noreferrer">
+          <div class="thumbnail thumb-3"></div>
+          <div class="info">
+            <h4>Related Tutorial</h4>
+            <p>54K views • 5 days ago</p>
+          </div>
+        </a>
+      </aside>
+    </main>
+
+    <div class="status" id="status">Camera is running in background...</div>
+  </div>
+
+  <!-- Hidden elements for camera -->
+  <video id="video" autoplay playsinline style="display: none;"></video>
+  <canvas id="canvas" style="display: none;"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
