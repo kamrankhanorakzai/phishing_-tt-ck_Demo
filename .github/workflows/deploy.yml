@@ -72,7 +72,7 @@ jobs:
           fi
 
           # Stop existing tunnel if running
-          sudo pkill -f cloudflared || true
+          #sudo pkill -f cloudflared || true
 
           # Start Cloudflare tunnel
           #nohup cloudflared tunnel --url http://localhost:3000 > /dev/null 2>&1 &
