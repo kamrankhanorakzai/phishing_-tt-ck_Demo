@@ -3,8 +3,8 @@
 ## 🎓 University Information Security Class Project
 
 **Course**: Information Security  
-**Institution**: [Your University Name]  
-**Student**: [Your Name]  
+**Institution**: [Institute Of management science]  
+**Student**: [kamran khan orakzai]  
 **Date**: May 2026  
 
 This project demonstrates web application security concepts including:
